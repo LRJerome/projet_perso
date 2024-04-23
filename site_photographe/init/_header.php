@@ -18,46 +18,61 @@
 
       <!-- ------------------------ Navbar ------------------------ -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+
         <div class="container-fluid fs-3">
-          <a class="navbar-brand fs-3" href="./index.php">Acceuil</a>
+          <a class="nav-link link-success text-dark navbar-brand fs-3 " href="./index.php">Acceuil</a>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse justify-content-center " id="navbarNavDropdown">
+            
             <ul class="navbar-nav">
-              <li class="nav-item  border border-dark rounded mx-2">
-                <a class="nav-link active " aria-current="page" href="#">Exemples</a>
+
+              <li class="nav-item border border-dark rounded mx-2">                
+                <a class="nav-link link-primary text-dark" aria-current="page" href="#">Exemples</a>
               </li>
+
               <li class="nav-item  border border-dark rounded mx-2">
-                <a class="nav-link active" href="./tarifs.php">Tarifs</a>
+                <a class="nav-link link-primary text-dark" href="./tarifs.php">Tarifs</a>
               </li>
+
               <li class="nav-item border border-dark rounded mx-2">
-                <a class="nav-link active" href="./formulaire.php">Nous contacter</a>
+                <a class="nav-link link-primary text-dark" href="./formulaire.php">Nous contacter</a>
               </li>
+
               <li class="nav-item dropdown  border border-dark rounded mx-2">
-                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                <a class="nav-link link-primary text-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Portofolio
                 </a>
+
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Mélanie et Jean</a></li>
                   <li><a class="dropdown-item" href="#">Lucie et Roland</a></li>
                   <li><a class="dropdown-item" href="#">David et Goliath</a></li>
                 </ul>
+
               </li>
               
             </ul>
+
           </div>
           <!-- -------------------------------- INSCRIPTION-CONNEXION-DECONNEXION -------------------------------- -->
           <div class="ms-auto" id="navbarNavDropdown">
+
             <ul class="navbar-nav">
               <!-- mon panier -->
               <li class="nav-item">
-          <a class="nav-link" href="#">
+
+          <a class="nav-link link-primary text-dark" href="#">
             <i class="bi bi-basket"></i> Mon panier
           </a>
+
         </li>
         <!--  -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="btn btn-success" aria-current="page" href="./inscription.php">Inscription</a>
               </li>
 
@@ -66,12 +81,32 @@
               </li>
               <li class="nav-item ">
                 <a class="btn btn-dark">Déconnexion</a>
-              </li>
+              </li> -->
+
+              <!-- ---------------------- PROFIL - INSCRIPTION - CONNEXION -DECONNEXION ---------------------- -->
+              <?php if (isset($_SESSION['user'])) { ?>
+                            <li class="nav-item">
+                                <a class="nav-link link-primary text-dark" href="#">Profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-danger nav-link link-dark text-dark" href="deconnexion.php">Se déconnecter</a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="nav-item">
+                                <a class="btn btn-success nav-link link-warning text-dark" href="inscription.php">Inscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary nav-link link-warning text-dark" href="connexion.php">Se connecter</a>
+                            </li>
+                        <?php } ?>
               
           </div>
 
 
         </div>
+
       </nav>
+
 </header>
+
     <main class="bg-white p-4">

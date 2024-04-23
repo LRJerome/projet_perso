@@ -1,6 +1,7 @@
 <!-- ------------------- INSERTION HEADER ET INIT ------------------- -->
 
 <?php
+$nav = "tarifs";
 include("init/_init.php");
 
 include("init/_header.php");

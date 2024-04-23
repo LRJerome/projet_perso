@@ -11,3 +11,7 @@ $pdo = new PDO(
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC // définir la key dans les tableaux de récupération (SELECT)
     ]
 );
+
+// SESSION ALLUMEE
+session_start();
+
